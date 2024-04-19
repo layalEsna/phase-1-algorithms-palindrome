@@ -1,13 +1,35 @@
+// function isPalindrome(word) {
+//   let arr = word.split('')
+//   let reversed = [...arr].reverse()
+//   if (arr.join('') === reversed.join('')) {
+//     return true
+//   }
+//   return false
+// }
+
 function isPalindrome(word) {
-  // Write your algorithm here
+
+
+  let wordArr = word.split('')
+  let reversed = []
+  for (let i = 0; i < wordArr.length; i++) {
+    //console.log(word[i])
+    reversed.push(wordArr[wordArr.length - 1 - i])
+
+
+  }
+
+  return (wordArr.join('') === reversed.join(''))
 }
 
+//console.log(isPalindrome('abc'))
 /* 
   Add your pseudocode here
 */
 
 /*
   Add written explanation of your solution here
+  creating new array to push words into array backward!!!
 */
 
 // You can run `node index.js` to view these console logs
